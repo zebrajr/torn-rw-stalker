@@ -1,0 +1,43 @@
+services:
+  server:
+    container_name: torn_rw_stalker_server
+    #restart: unless-stopped
+    build: ./server
+    image: torn_rw_stalker_server:latest
+    ports:
+      - '2000:2000'
+    #volumes:
+    #  - ./server:/usr/src/app:ro
+    networks:
+      - torn_rw_stalker_backend
+
+
+  # client:
+  #   container_name: torn_rw_stalker_client
+  #   #restart: unless-stopped
+  #   build: ./client
+  #   image: torn_rw_stalker_client:latest
+  # #  volumes:
+  # #    - ./client:/usr/src/app/client
+  #   ports:
+  #    - '3000:3000'
+
+
+  mongo:
+    container_name: torn_rw_stalker_mongo
+    #hostname: mongo
+    #restart: unless-stopped
+    image: mongo:5.0.8
+    ports:
+      - '27017:27017'
+    networks:
+      - torn_rw_stalker_backend
+    #volumes:
+    #  - ./db:/data/db
+
+
+networks:
+  torn_rw_stalker_backend:
+    external: true
+  torn-rw-stalker-frontend:
+    external: true

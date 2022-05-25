@@ -1,0 +1,26 @@
+{
+  "name": "torn-rw-stalker",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zebrajr/torn-rw-stalker.git"
+  },
+  "author": "Carlos Sousa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zebrajr/torn-rw-stalker/issues"
+  },
+  "homepage": "https://github.com/zebrajr/torn-rw-stalker#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.4",
+    "nodemon": "^2.0.16"
+  }
+}
