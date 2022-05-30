@@ -1,15 +1,15 @@
 services:
-  server:
-    container_name: torn_rw_stalker_server
-    #restart: unless-stopped
-    build: ./server
-    image: torn_rw_stalker_server:latest
-    ports:
-      - '2000:2000'
-    #volumes:
-    #  - ./server:/usr/src/app:ro
-    networks:
-      - torn_rw_stalker_backend
+  # server:
+  #   container_name: torn_rw_stalker_server
+  #   #restart: unless-stopped
+  #   build: ./server
+  #   image: torn_rw_stalker_server:latest
+  #   ports:
+  #     - '2000:2000'
+  #   #volumes:
+  #   #  - ./server:/usr/src/app:ro
+  #   networks:
+  #     - torn_rw_stalker_backend
 
 
   # client:
